@@ -1,15 +1,20 @@
-import { useEffect, useRef } from 'react';
-import * as THREE from 'three';
+import { useEffect, useRef } from "react";
+import * as THREE from "three";
 
 const Internship = () => {
   const mountRef = useRef(null);
 
   useEffect(() => {
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const camera = new THREE.PerspectiveCamera(
+      75,
+      window.innerWidth / window.innerHeight,
+      0.1,
+      1000
+    );
     const renderer = new THREE.WebGLRenderer({
       antialias: true,
-      alpha: true
+      alpha: true,
     });
 
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -24,16 +29,22 @@ const Internship = () => {
       posArray[i] = (Math.random() - 0.5) * 100;
     }
 
-    particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+    particlesGeometry.setAttribute(
+      "position",
+      new THREE.BufferAttribute(posArray, 3)
+    );
 
     const particlesMaterial = new THREE.PointsMaterial({
       size: 0.1,
       color: 0x00ffff,
       transparent: true,
-      opacity: 0.6
+      opacity: 0.6,
     });
 
-    const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+    const particlesMesh = new THREE.Points(
+      particlesGeometry,
+      particlesMaterial
+    );
     scene.add(particlesMesh);
 
     camera.position.z = 30;
@@ -53,97 +64,118 @@ const Internship = () => {
       renderer.setSize(window.innerWidth, window.innerHeight);
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
       mountRef.current?.removeChild(renderer.domElement);
     };
   }, []);
 
   return (
-    <div style={{
-      position: 'relative',
-      height: '100vh',
-      paddingTop: '80px' 
-    }}>
+    <div
+      style={{
+        position: "relative",
+        height: "100vh",
+        paddingTop: "80px",
+      }}
+    >
       <div
         ref={mountRef}
         style={{
-          position: 'absolute',
+          position: "absolute",
           top: 0,
           left: 0,
-          width: '100%',
-          height: '100%'
+          width: "100%",
+          height: "100%",
         }}
       />
 
-      <div style={{
-        position: 'relative',
-        zIndex: 100,
-        maxWidth: '1200px',
-        margin: '0 auto',
-        padding: '2rem'
-      }}>
-        <h1 style={{
-          color: '#00fffc',
-          fontSize: '3rem',
-          fontFamily: "'Rajdhani', sans-serif",
-          fontWeight: '600',
-          textTransform: 'uppercase',
-          letterSpacing: '2px',
-          textShadow: '0 0 10px #00fffc, 0 0 20px #0084ff',
-          marginBottom: '2rem'
-        }}>
+      <div
+        style={{
+          position: "relative",
+          zIndex: 100,
+          maxWidth: "1200px",
+          margin: "0 auto",
+          padding: "2rem",
+        }}
+      >
+        <h1
+          style={{
+            color: "#00fffc",
+            fontSize: "3rem",
+            fontFamily: "'Rajdhani', sans-serif",
+            fontWeight: "600",
+            textTransform: "uppercase",
+            letterSpacing: "2px",
+            textShadow: "0 0 10px #00fffc, 0 0 20px #0084ff",
+            marginBottom: "2rem",
+          }}
+        >
           Internship Details
         </h1>
 
-        <div style={{
-          background: 'rgba(10, 10, 26, 0.7)',
-          backdropFilter: 'blur(10px)',
-          border: '1px solid rgba(0, 255, 252, 0.3)',
-          borderRadius: '12px',
-          padding: '2rem',
-          color: '#ffffff',
-          maxWidth: '800px',
-          lineHeight: '1.6',
-          boxShadow: '0 0 30px rgba(0, 255, 252, 0.1)'
-        }}>
-          <p style={{ marginBottom: '1rem' }}>
-          Are you ready to gain hands-on experience and kickstart your career? TechieGreeks is offering 1-3 month internships in Content Writing, Graphic Designing, Digital Marketing, and App Development! Work on real-world projects, enhance your skills, and learn from industry experts. Plus, your hard work won’t go unnoticed—we provide performance-based stipends to reward your dedication. Whether you're a beginner or looking to refine your expertise, this is your chance to grow and shine. Apply now and take a step toward a brighter future! 🚀
+        <div
+          style={{
+            background: "rgba(10, 10, 26, 0.7)",
+            backdropFilter: "blur(10px)",
+            border: "1px solid rgba(0, 255, 252, 0.3)",
+            borderRadius: "12px",
+            padding: "2rem",
+            color: "#ffffff",
+            maxWidth: "800px",
+            lineHeight: "1.6",
+            boxShadow: "0 0 30px rgba(0, 255, 252, 0.1)",
+          }}
+        >
+          <p style={{ marginBottom: "1rem" }}>
+            Are you ready to gain hands-on experience and kickstart your career?
+            Techie Greeks is offering exciting 1–3 month remote internship
+            opportunities in Web Development, Content Writing, Graphic
+            Designing, Digital Marketing, and App Development. You'll get the
+            chance to work on real-world projects, enhance your skills, and
+            learn from industry experts—all from the comfort of your home. To
+            recognize your hard work, we offer performance-based stipends and
+            Completion Certification. Whether you're a beginner or looking to
+            refine your expertise, this is a great opportunity to learn, grow,
+            and shine. Don’t miss out—apply now and take the first step toward a
+            brighter future with Techie Greeks!
           </p>
-          <p style={{ marginBottom: '1rem' }}>
-            Duration: 1-3 months | Location: Ghaziabad (Uttar Pradesh) | Stipend: Performance-based
+          <p style={{ marginBottom: "1rem" }}>
+            Duration: 1-3 months | Location: Ghaziabad (Uttar Pradesh) |
+            Stipend: Performance-based
           </p>
         </div>
-        <div style={{
-          marginTop: '2rem',
-          textAlign: 'left'
-        }}>
+        <div
+          style={{
+            marginTop: "2rem",
+            textAlign: "left",
+          }}
+        >
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSeRNO3oFVDIwsHBCVM6XoC9pOS1BJB1zrcKke6h1GD69VhCsQ/viewform?usp=dialog"
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              display: 'inline-block',
-              padding: '12px 30px',
-              background: 'linear-gradient(90deg, #00fffc 0%, #0084ff 100%)',
-              color: '#0a0a1a',
-              borderRadius: '8px',
-              textDecoration: 'none',
-              fontWeight: '600',
-              fontSize: '1.1rem',
+              display: "inline-block",
+              padding: "12px 30px",
+              background: "linear-gradient(90deg, #00fffc 0%, #0084ff 100%)",
+              color: "#0a0a1a",
+              borderRadius: "8px",
+              textDecoration: "none",
+              fontWeight: "600",
+              fontSize: "1.1rem",
               fontFamily: "'Rajdhani', sans-serif",
-              textTransform: 'uppercase',
-              letterSpacing: '1px',
-              boxShadow: '0 0 15px rgba(0, 255, 252, 0.5)',
-              transition: 'all 0.3s ease',
-              border: 'none',
-              cursor: 'pointer',
-              ':hover': {
-                transform: 'translateY(-3px)',
-                boxShadow: '0 0 25px rgba(0, 255, 252, 0.8)'
-              }
+              textTransform: "uppercase",
+              letterSpacing: "1px",
+              boxShadow: "0 0 15px rgba(0, 255, 252, 0.5)",
+              transition: "all 0.3s ease",
+              border: "none",
+              cursor: "pointer",
+              ":hover": {
+                transform: "translateY(-3px)",
+                boxShadow: "0 0 25px rgba(0, 255, 252, 0.8)",
+              },
             }}
           >
             Apply Now
