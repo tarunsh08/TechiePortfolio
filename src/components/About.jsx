@@ -47,11 +47,15 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        We're a team of skilled software developers with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. We collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+        At TechieGreek, we are a passionate team of skilled software developers
+        specializing in modern web technologies. With expertise in TypeScript,
+        JavaScript, and frameworks like React, Node.js, and Three.js, we build
+        high-performance, scalable, and user-centric solutions. From dynamic
+        websites to powerful web applications, we bring innovation and
+        efficiency to every project. Beyond development, we empower aspiring
+        developers through paid internships with hands-on experience and
+        certifications, shaping the next generation of tech leaders. Let’s turn
+        your ideas into reality—where technology meets creativity!"
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>

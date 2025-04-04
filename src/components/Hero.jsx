@@ -19,8 +19,11 @@ const Hero = () => {
             Welcome to <span className='text-[#915EFF]'>TechieGreeks</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            We develop 3D visuals, user <br className='sm:block hidden' />
-            interfaces and web applications
+          We specialize in developing all types of websites, web applications,
+            and user-friendly interfaces, delivering tailored digital solutions
+            for businesses. We also offer paid internships with hands-on
+            experience and certifications to help aspiring developers grow in
+            the industry.
           </p>
         </div>
       </div>
