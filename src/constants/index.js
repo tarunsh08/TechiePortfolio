@@ -117,7 +117,7 @@ const experiences = [
     company_name: "",
     icon: meta,
     iconBg: "#383E56",
-    date: "March 2024 - April 2025",
+    date: "",
     points: [
       "Our graphic design work spans branding, logo creation, digital illustrations, marketing materials, and social media graphics, delivering visually striking solutions for various industries.",
       "We specialize in crafting cohesive and memorable brand identities, ensuring consistency across print and digital platforms to enhance recognition and appeal.",
@@ -130,7 +130,7 @@ const experiences = [
     company_name: "",
     icon: meta,
     iconBg: "#E6DEDD",
-    date: "Jan 2024 - Feb 2025",
+    date: "",
     points: [
       "We design and develop high-performance, user-friendly applications for iOS, Android, and web platforms, tailored to meet specific business needs and user demands.",
       "Our apps feature intuitive interfaces and smooth navigation, ensuring an engaging user experience backed by responsive design principles.",
@@ -143,7 +143,7 @@ const experiences = [
     company_name: "",
     icon: meta,
     iconBg: "#383E56",
-    date: "Jan 2024 - Jan 2025",
+    date: "",
     points: [
       "We handle both frontend (UI/UX, React, Angular) and backend (Node.js, Django, .NET) development, delivering seamless, integrated web and mobile applications.",
       "Our solutions feature cloud-ready, microservices-based designs with RESTful/GraphQL APIs for high performance and future growth.",
@@ -156,7 +156,7 @@ const experiences = [
     company_name: "",
     icon: meta,
     iconBg: "#E6DEDD",
-    date: "Jan 2025 - Present",
+    date: "",
     points: [
       "We craft targeted strategies across SEO, PPC, and social media, leveraging analytics to maximize ROI and audience engagement.",
       " From viral social content to high-converting email campaigns, we blend creativity with strategy to amplify brand visibility and loyalty.",
